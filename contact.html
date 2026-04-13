@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
   <title>After Drift</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="style.css" />
@@ -9,23 +8,35 @@
 </head>
 <body>
 
-  <!-- Navigation Bar -->
   <div class="nav-bar">
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
     <div class="logo">
       <img src="images/logo1.jpg" alt="Logo" class="logo-img" />
+      <span class="site-name">After Drift</span>
+    </div>
+
+    <div class="nav-menu" id="nav-menu">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="https://www.printful.com/blog/gen-z-fashion">Trends</a>
-    </div>
-
-    <div class="dropdown">
-      <button class="dropbtn">Categories</button>
-      <div class="dropdown-content">
-        <a href="womens.html">Womens</a>
-        <a href="mens.html">Mens</a>
-        <a href="kids.html">Kids</a>
-        <a href="shoes.html">Footwear</a>
+      
+      <div class="dropdown">
+        <button class="dropbtn" id="dropbtn">Categories</button>
+        <div class="dropdown-content" id="dropdown-content">
+          <a href="womens.html">Womens</a>
+          <a href="mens.html">Mens</a>
+          <a href="kids.html">Kids</a>
+          <a href="shoes.html">Footwear</a>
+        </div>
       </div>
+
+      <a href="contact.html">Contact Us</a>
+      <a href="fqs.html">FAQs</a>
     </div>
 
     <div class="search-container">
@@ -34,17 +45,16 @@
         <img src="images/btnn.png" alt="Search" />
       </button>
     </div>
-
-    <div class="log-page">
-      <a href="contact.html">Contact Us</a>
-      <a href="fqs.html">FAQs</a>
-    </div>
   </div>
-
-  <!-- Contact Image -->
+  
   <div>
     <img src="images/contact.jpg" alt="Contact image" class="contact-us" />
   </div>
 
+ <footer class="site-footer">
+    <p>&copy; 2026 After Drift | All Rights Reserved</p>
+  </footer>
+  
+  <script src="script.js"></script>
 </body>
 </html>
