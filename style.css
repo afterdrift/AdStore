@@ -10,10 +10,9 @@ body {
   padding-top: 70px;
   min-height: 100vh;
   overflow-x: hidden;
-  font-family: 'TT Norms';
+  font-family: 'TT Norms', sans-serif;
 }
 
-/* NAV BAR */
 .nav-bar {
   position: fixed;
   top: 0;
@@ -21,64 +20,123 @@ body {
   width: 100%;
   height: 70px;
   background-color: #000;
-  padding: 0 32px;
+  padding: 0 20px;
   display: flex;
   align-items: center;
   z-index: 1000;
 }
 
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 25px;
+  height: 20px;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+.hamburger span {
+  width: 100%;
+  height: 2px;
+  background-color: white;
+  transition: 0.3s;
+}
+
 .logo {
   display: flex;
   align-items: center;
-  margin-right: 40px;
 }
+
 .logo-img {
   width: 40px;
   height: 40px;
   object-fit: contain;
-  margin-right: 15px;
+  margin-right: 10px;
 }
 
-.nav-bar a {
+.site-name {
+  color: white;
+  font-weight: bold;
+}
+
+.nav-menu {
+  position: fixed;
+  top: 70px;
+  left: -100%;
+  width: 280px;
+  height: calc(100vh - 70px);
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  transition: 0.4s ease;
+}
+
+.nav-menu.active {
+  left: 0;
+}
+
+.nav-menu a, .dropbtn {
   color: white;
   text-decoration: none;
-  margin: 0 40px;
+  font-size: 18px;
+  margin: 15px 0;
+  background: none;
+  border: none;
+  text-align: left;
+  font-family: 'TT Norms';
+  cursor: pointer;
 }
+
 
 .dropdown {
   position: relative;
-  display: absolute;
-  
-  
+  width: 100%; 
+  display: block; 
 }
+
+
 .dropbtn {
-  background-color: #000;
+  width: 100%;
+  padding: 15px 0;
+  display: block;
+  font-size: 18px;
   color: white;
-  padding: 14px 20px;
+  background: none;
   border: none;
+  text-align: left;
   cursor: pointer;
-  font-size: 16px;
-  font-family: 'TT Norms';
 }
+
+
 .dropdown-content {
   display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
-  z-index: 999;
+  position: relative; 
+  width: 100%;
+  background-color: #1a1a1a; 
+  overflow: hidden;
+  margin-bottom: 10px;
 }
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-.dropdown-content a:hover {
-  background-color: #ddd;
-}
+
+
 .dropdown:hover .dropdown-content {
   display: block;
+}
+
+.dropdown-content a {
+  font-size: 16px;
+  color: #ffffff; 
+  padding: 12px 20px;
+  display: block;
+  text-decoration: none;
+  margin: 0 !important; 
+  border-bottom: 1px solid #333; 
+}
+
+.dropdown-content a:hover {
+  background-color: #333;
+  color: white;
 }
 
 .search-container {
@@ -86,39 +144,30 @@ body {
   align-items: center;
   margin-left: auto;
 }
+
 .search-input {
   padding: 5px 15px;
-  border: 1px solid #ccc;
+  border: 1px solid #444;
   border-radius: 20px;
   outline: none;
-  width: 250px;
+  width: 180px;
   background: transparent;
   color: white;
 }
+
 .search-btn {
   background: none;
   border: none;
   cursor: pointer;
   margin-left: 10px;
 }
+
 .search-btn img {
   width: 18px;
   height: 18px;
 }
 
-.log-page {
-  display: flex;
-  margin-left: 30px;
-  white-space: nowrap;
-}
-.log-page a {
-  color: white;
-  text-decoration: none;
-  margin: 0 15px;
-}
-
-/* COVER IMAGE */
-.cover-page, .about-us, .contact-us, .FAQs, .womens-cover, .mens-cover, .kids-cover{
+.cover-page {
   display: block;
   width: 100%;
   height: auto;
@@ -126,7 +175,6 @@ body {
   margin-bottom: 40px;
 }
 
-/* GALLERY */
 .gallery-wrapper {
   position: relative;
   width: 100%;
@@ -148,6 +196,7 @@ body {
   flex-direction: column;
   align-items: center;
 }
+
 .box-container {
   width: 400px;   
   height: 500px;  
@@ -182,7 +231,6 @@ body {
   text-decoration: none; 
 }
 
-
 .gallery-link {
   display: block;
   text-decoration: none; 
@@ -203,7 +251,7 @@ body {
   justify-content: center;
   cursor: pointer;
   font-size: 24px;
-  color: #000;
+  color: #cccaca;
   transition: background 0.3s, box-shadow 0.3s;
   z-index: 10;
 }
@@ -211,17 +259,35 @@ body {
   background: rgba(0,0,0,0.1);
   box-shadow: 0 0 10px rgba(0,0,0,0.2);
 }
+
+.womens-cover,
+.mens-cover,
+.kids-cover,
+.shoes-cover,
+.fqs-cover,
+.contact-us,
+.about-us {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  margin-bottom: 40px; 
+}
+
 .prev { left: 10px; }
 .next { right: 10px; }
 
-.some-selector {
-  display: block;
-  /* vertical-align: middle; */ /* remove this */
+.site-footer {
+  background-color: #000;   
+  color: #fff;              
+  text-align: center;       
+  padding: 50px;            
+  position: relative;      
+  bottom: 0;
+  width: 100%;
+  font-family: Arial, sans-serif;
 }
-
-/* If you need vertical centering instead: */
-.some-selector {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.site-footer p {
+  margin: 0; 
+  font-size: 14px; 
 }
