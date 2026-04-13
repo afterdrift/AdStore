@@ -8,25 +8,35 @@
 </head>
 <body>
 
-  <!-- Navigation Bar -->
   <div class="nav-bar">
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
     <div class="logo">
       <img src="images/logo1.jpg" alt="Logo" class="logo-img" />
+      <span class="site-name">After Drift</span>
+    </div>
+
+    <div class="nav-menu" id="nav-menu">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="https://www.printful.com/blog/gen-z-fashion">Trends</a>
-    </div>
-
-    <div class="navbar">
-      <div class="dropdown">
-        <button class="dropbtn">Categories</button>
-        <div class="dropdown-content">
+      
+            <div class="dropdown">
+        <button class="dropbtn" id="dropbtn">Categories</button>
+        <div class="dropdown-content" id="dropdown-content">
           <a href="womens.html">Womens</a>
           <a href="mens.html">Mens</a>
           <a href="kids.html">Kids</a>
           <a href="shoes.html">Footwear</a>
         </div>
       </div>
+
+      <a href="contact.html">Contact Us</a>
+      <a href="fqs.html">FAQs</a>
     </div>
 
     <div class="search-container">
@@ -35,17 +45,10 @@
         <img src="images/btnn.png" alt="Search" />
       </button>
     </div>
-
-    <div class="log-page">
-      <a href="contact.html">Contact Us</a>
-      <a href="fqs.html">FAQs</a>
-    </div>
   </div>
 
-  <!-- Cover Image -->
   <img src="images/cover.jpg" alt="Cover" class="cover-page" />
 
-  <!-- Gallery Section -->
   <div class="gallery-wrapper">
     <button class="nav-btn prev" aria-label="Previous">&lt;</button>
     <div class="gallery">
@@ -99,6 +102,62 @@
     <button class="nav-btn next" aria-label="Next">&gt;</button>
   </div>
 
+  <div class="gallery-wrapper">
+    <button class="nav-btn prev" aria-label="Previous">&lt;</button>
+    <div class="gallery">
+
+      <a href="" class="gallery-link">
+        <div class="gallery-item">
+          <div class="box-container">
+            <img src="images/image1.jpg" alt="Image 1" class="gallery-image" />
+            <p class="image-info">Dress</p>
+          </div>
+        </div>
+      </a>
+
+      <a href="" class="gallery-link">
+        <div class="gallery-item">
+          <div class="box-container">
+            <img src="images/image2.jpg" alt="Image 2" class="gallery-image" />
+            <p class="image-info">Dress</p>
+          </div>
+        </div>
+      </a>
+
+      <a href="" class="gallery-link">
+        <div class="gallery-item">
+          <div class="box-container">
+            <img src="images/image3.jpg" alt="Image 3" class="gallery-image" />
+            <p class="image-info">Shorts</p>
+          </div>
+        </div>
+      </a>
+
+      <a href="" class="gallery-link">
+        <div class="gallery-item">
+          <div class="box-container">
+            <img src="images/image4.jpg" alt="Image 4" class="gallery-image" />
+            <p class="image-info">Sneaker</p>
+          </div>
+        </div>
+      </a>
+
+      <a href="" class="gallery-link">
+        <div class="gallery-item">
+          <div class="box-container">
+            <img src="images/image5.jpg" alt="Image 5" class="gallery-image" />
+            <p class="image-info">Formal</p>
+          </div>
+        </div>
+      </a>
+
+    </div>
+    <button class="nav-btn next" aria-label="Next">&gt;</button>
+  </div>
+
+ <footer class="site-footer">
+    <p>&copy; 2026 After Drift | All Rights Reserved</p>
+  </footer>
 
   <script src="script.js"></script>
 </body>
